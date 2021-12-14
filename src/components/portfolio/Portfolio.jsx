@@ -1,6 +1,6 @@
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import { webPortfolio, mobilePortfolio, designPortfolio } from "../../data";
 
 export default function Portfolio() {
@@ -10,16 +10,10 @@ export default function Portfolio() {
     const list = [
         {
             id: "web",
-            title: "Web App",
+            title: "Web",
         },
-        {
-            id: "mobile",
-            title: "Mobile App",
-        },
-        {
-            id: "design",
-            title: "Design",
-        },
+        
+
 
     ];
 
@@ -29,12 +23,7 @@ export default function Portfolio() {
             case "web":
                 setData(webPortfolio);
                 break;
-            case "mobile":
-                setData(mobilePortfolio);
-                break;
-            case "designe":
-                setData(designPortfolio);
-                break;
+            
             default:
                 setData(webPortfolio);
 
@@ -44,7 +33,7 @@ export default function Portfolio() {
 
     return (
         <div className='portfolio' id="portfolio">
-            <h1>Portfolio.</h1>
+            <h1>My recent works.</h1>
             <ul>
                 {list.map(item => (
                     <PortfolioList title={item.title}

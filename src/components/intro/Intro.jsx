@@ -10,7 +10,7 @@ export default function Intro() {
         init(textRef.current, {
             showCursor: true,
             backDelay:1500,
-            strings: ['fullstack developer', 'Designer', "Content Creator"],
+            strings: ['fullstack developer',],
         });
     }, [])
     return (

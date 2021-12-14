@@ -20,5 +20,3 @@ export default function Menu({ menuOpen, setMenuOpen }) {
     )
 }
 
-{/*TODO
-    better: create new component and outsource the onClick function so that it shouldn't get called here multiple times*/}

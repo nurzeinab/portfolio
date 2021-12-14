@@ -1,9 +1,11 @@
-.app {
+.app{
     height: 100vh;
-    .sections {
+    display: flex;
+
+    .sections{
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: lightsalmon;
+        background-color: black;
         position: relative;
         top: 70px;
         scroll-behavior: smooth;
@@ -14,7 +16,7 @@
         }
 
         > *{
-            width: 100vx;
+            width: 100vw;
             height: calc(100vh - 70px);
             scroll-snap-align: start;
         }
