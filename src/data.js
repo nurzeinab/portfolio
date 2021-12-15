@@ -3,6 +3,7 @@ export const webPortfolio = [
         id: 1,
         title: "Finanboutique AG Website",
         img: "img/finanzboutique_website.png",
+        link: "https://www.finanzboutique.com/",
     },
     
 ]
