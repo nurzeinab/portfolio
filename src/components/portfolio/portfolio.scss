@@ -1,82 +1,106 @@
 @import "../../global.scss";
 
 .portfolio {
-    background-color: $mainColor;
+  background-color: $mainColor;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 50px;
+
+    @include mobile {
+      font-size: 30px;
+    }
+  }
+
+  ul {
+    margin: 10px;
+
+    list-style: none;
     display: flex;
-    flex-direction: column;
+
+    @include mobile {
+      margin: 10px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .container {
+    width: 70%;
+    display: flex;
     align-items: center;
-    color: white;
-  
-    h1 {
-      font-size: 50px;
-  
-      @include mobile{
-        font-size: 20px;
-      }
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include mobile {
+      width: 100%;
     }
-  
-    ul {
-      margin: 30px;
-      list-style: none;
-      display: flex;
-  
-      @include mobile{
-        margin: 10px 0;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    }
-  
-    .container {
-        margin: 30px;
-      width: 70%;
+
+    .item {
+      width: 300px;
+      height: 200px;
+      border-radius: 20px;
+      border: 1px solid rgb(240, 239, 239);
+      margin: 10px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-  
-      @include mobile{
-        width: 100%;
+      color: white;
+      position: relative;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      @include mobile {
+        width: 130px;
+        height: 100px;
       }
-  
-      .item {
-        width: 350px;
-        height: 250px;
-        border-radius: 20px;
-        border: 1px solid rgb(240, 239, 239);
-        margin: 10px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        position: relative;
-        transition: all .5s ease;
-        cursor: pointer;
-  
-        @include mobile{
-          width: 130px;
-          height: 100px;
-        }
-  
-        h3 {
-          position: absolute;
-          font-size: 15px;
-        }
-  
+
+      h3 {
+        position: absolute;
+        font-size: 15px;
+      }
+
+      img {
+        border: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        vertical-align: top;
+      }
+
+      &:hover {
+        background-color: #dd6691;
         img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          z-index: 1;
-        }
-  
-        &:hover {
-          background-color: #dd6691;
-          img {
-            opacity: 0.2;
-            z-index: 0;
-          }
+          opacity: 0.2;
+          z-index: 0;
         }
       }
     }
   }
+
+  .infoText {
+    padding-top: 50px;
+    color: #dd6691;
+    font-size: 25px;
+
+    .ityped-cursor {animation: blink 1s infinite;}
+    
+
+    @include mobile {
+      font-size: 15px;
+    }
+
+    @keyframes blink {
+      50% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+      }
+  }
+  }
+}

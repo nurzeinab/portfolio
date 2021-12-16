@@ -5,6 +5,12 @@ export const webPortfolio = [
         img: "img/finanzboutique_website.png",
         link: "https://www.finanzboutique.com/",
     },
+    {
+        id: 2,
+        title: "This Website",
+        img: "img/portfolio_website.png",
+        link: "https://github.com/nurzeinab/portfolio",
+    },
     
 ]
 
@@ -12,25 +18,8 @@ export const mobilePortfolio = [
     {
         id: 1,
         title: "Coming soon",
+        img: "img/laptop-g089ca11b4_1920.jpg",
        
     },
    
-]
-
-export const designPortfolio = [
-    {
-        id: 1,
-        title: "Design 1",
-        img: "img/placeholder.png",
-    },
-    {
-        id: 2,
-        title: "Design 2",
-        img: "img/placeholder.png",
-    },
-    {
-        id: 3,
-        title: "Design 3",
-        img: "img/placeholder.png",
-    },
 ]
